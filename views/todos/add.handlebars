@@ -1,0 +1,22 @@
+<h4>Add Todo</h4>
+<hr />
+
+<form method='POST' action='/todos/add'>
+    <div class="form-group">
+        <label for="todo-title">Title</label>
+        <input type="text" class="form-control" id="todo-title" name="todo_title" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label for="todo-body">Description</label>
+        <textarea class="form-control" id="todo-body" name="todo_body" placeholder="Enter Description"
+            rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label class="form-check-label">Completed!
+            <input type="checkbox" class="form-check-input" name="is_completed_add">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Todo</button>
+</form>

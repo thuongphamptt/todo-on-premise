@@ -1,0 +1,33 @@
+{
+  "name": "node-mysql-todo-app",
+  "version": "1.0.0",
+  "description": "Node MySQL Todo Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsamara/node-mysql-todo-app.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "express-handlebars"
+  ],
+  "author": "Mohamed Samara (https://github.com/mohamedsamara)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamedsamara/node-mysql-todo-app/issues"
+  },
+  "homepage": "https://github.com/mohamedsamara/node-mysql-todo-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.18.1"
+  }
+}

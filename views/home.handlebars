@@ -1,0 +1,57 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Todo Application</h1>
+        <p class="lead">Hey, Welcome in!</p>
+        <p class="lead">Check your todos! Add new todo! Mark previous todo done!</p>
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <div class="col-sm-10">
+        <a href="/todos/add" class="btn btn-light">Add Todo</a>
+    </div>
+</div>
+
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search Todos" id="todo-search">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" id="search-btn" type="button">Search</button>
+    </div>
+</div>
+
+<ul class="list-group" id="todo-list">
+
+    {{#each todos}}
+
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <a href="/todos/edit/{{this.todo_id}}">{{this.todo_title}}</a>
+        {{#if this.is_completed}}
+
+        <div class="form-group">
+
+            <label class="form-check-label">Completed!
+                <input type="checkbox" class="form-check-input" id="{{this.todo_id}}" name="is_completed" checked>
+                <span class="checkmark"></span>
+            </label>
+
+        </div>
+        {{else}}
+
+        <div class="form-group">
+
+            <label class="form-check-label">Completed!
+                <input type="checkbox" class="form-check-input" id="{{this.todo_id}}" name="is_completed">
+                <span class="checkmark"></span>
+            </label>
+
+        </div>
+        {{/if}}
+    </li>
+
+    {{/each}}
+
+</ul>
+
+<ul class="list-group" id="search-result"></ul>

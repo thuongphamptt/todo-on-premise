@@ -1,0 +1,40 @@
+<h4>{{todo.todo_title}}</h4>
+<hr />
+
+<form method='POST' , action='/todos/edit/{{todo.todo_id}}'>
+    <div class="form-group">
+        <label for="todo-title">Title</label>
+        <input type="text" class="form-control" id="todo-title" name="todo_title" value="{{todo.todo_title}}">
+    </div>
+    <div class="form-group">
+        <label for="todo-body">Description</label>
+        <textarea class="form-control" id="todo-body" name="todo_body" rows="3">{{todo.todo_body}}</textarea>
+    </div>
+
+    {{#if todo.is_completed}}
+    <label class="form-check-label">Completed!
+        <input type="checkbox" class="form-check-input" id="{{todo.todo_id}}" name="is_completed" checked>
+        <span class="checkmark"></span>
+    </label>
+
+    {{else}}
+    <label class="form-check-label">Completed!
+        <input type="checkbox" class="form-check-input" id="{{todo.todo_id}}" name="is_completed">
+        <span class="checkmark"></span>
+    </label>
+
+    {{/if}}
+
+    <div class="row align-items-center">
+        <div class="col-lg-2 col-md-3 col-5 my-1">
+            <button type="submit" class="btn btn-primary">Update Todo</button>
+        </div>
+        <div class="col-md-1 px-lg-0 col-4 my-1">
+            <a href="/todos/delete/{{todo.todo_id}}" class="btn btn-danger">Delete</a>
+        </div>
+        <div class="col-md-9 col-4 my-1 text-lg-right">
+            <a href="/" class="btn btn-link">Back</a>
+        </div>
+    </div>
+
+</form>
