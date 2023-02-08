@@ -1,7 +1,7 @@
 exports.mysql = {
-  host: '34.143.227.84',
+  host: process.env.DBHOST,
   port: 3306,
-  database: 'nodetodo',
-  user: 'root',
-  password: 'gms@123'
+  database: process.env.DBNAME,
+  user: process.env.DBUSER,
+  password: process.env.DBPASSWORD
 };
