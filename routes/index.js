@@ -1,3 +1,4 @@
+require('@google-cloud/trace-agent').start();
 const { connection } = require('../config/database');
 
 const getHomePage = (req, res) => {
