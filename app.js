@@ -1,3 +1,4 @@
+require('@google-cloud/trace-agent').start();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
@@ -7,7 +8,7 @@ const { getHomePage } = require('./routes/index');
 
 const app = express();
 const port = 3000;
-require('@google-cloud/trace-agent').start();
+
 // set public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
