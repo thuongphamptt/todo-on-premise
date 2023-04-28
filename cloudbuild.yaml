@@ -1,20 +1,31 @@
  steps:
- # Build the container image
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA', '.']
- # Push the container image to Container Registry
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA']
+#static code analysis by sonarqube
+
+ - name: "gcr.io/PROJECT_ID/sonar-scanner:latest"
+   args: 
+      - "-Dsonar.host.url=http://34.143.243.226:9000"
+      - "-Dsonar.login=sqp_92958c76b820b276beb428463029e8061959b318"
+      - "-Dsonar.projectKey=projectKey=nodejs"
+      - "-Dsonar.sources=."
+#  # Build the container image
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args: ['build', '-t', 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA', '.']
+#  # Push the container image to Container Registry
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args: ['push', 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA']
+
+
+
  # Deploy container image to Cloud Run
- - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-   entrypoint: gcloud
-   args:
-   - 'run'
-   - 'deploy'
-   - 'demo-app'
-   - '--image'
-   - 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA'
-   - '--region'
-   - 'asia-southeast1'
- images:
- - 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA'
+#  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#    entrypoint: gcloud
+#    args:
+#    - 'run'
+#    - 'deploy'
+#    - 'demo-app'
+#    - '--image'
+#    - 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA'
+#    - '--region'
+#    - 'asia-southeast1'
+#  images:
+#  - 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA'
