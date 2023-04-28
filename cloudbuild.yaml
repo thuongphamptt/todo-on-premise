@@ -5,7 +5,7 @@
    args: 
       - "-Dsonar.host.url=http://34.143.243.226:9000"
       - "-Dsonar.login=sqp_92958c76b820b276beb428463029e8061959b318"
-      - "-Dsonar.projectKey=projectKey=nodejs"
+      - "-Dsonar.projectKey=nodejs"
       - "-Dsonar.sources=."
 #  # Build the container image
 #  - name: 'gcr.io/cloud-builders/docker'
