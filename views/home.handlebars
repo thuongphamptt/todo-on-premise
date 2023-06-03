@@ -53,5 +53,20 @@
     {{/each}}
 
 </ul>
+<script> 
+fetch("https://todo-app-be-47nak22qfa-as.a.run.app/api/todos")  
+.then(function(res) {
+    console.log(res); //xem thử trong console của trình duyệt nhé
+    if(!res.ok) {throw new Error("Lỗi = " + res.status); }
+    return res.json();
+})
+.then(function(data) {
+    console.log(data);
+    //hiện data ra web (dùng foreach)
+})
+.catch(function(error)  { 
+    console.log("Lỗi: ", error);
+})
+</script>
 
 <ul class="list-group" id="search-result"></ul>
