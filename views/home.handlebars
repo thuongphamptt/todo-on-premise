@@ -5,22 +5,7 @@
         <p class="lead">Check your todos! Add new todo! Mark previous todo done!</p>
     </div>
 </div>
-<h1>Chi tiết user</h1>
-<div id="chitietuser"></div>
-<script> 
-    fetch("https://todo-app-be-47nak22qfa-as.a.run.app/api/todos")  
-    .then(function(res) {
-        if(!res.ok) {throw new Error("Lỗi = " + res.status); }
-        return res.json();
-    })
-    .then(function(data) {
-        let str="";
-        str+= "<p>Username: " + data.id +"</p>";
-        document.getElementById("chitietuser").innerHTML=str;
-        console.log(data);
-    })
-    .catch(function(error)  { console.log("Lỗi: ", error);})
-</script>
+
 
 <div class="form-group row">
     <div class="col-sm-10">
@@ -68,6 +53,5 @@
     {{/each}}
 
 </ul>
-
 
 <ul class="list-group" id="search-result"></ul>

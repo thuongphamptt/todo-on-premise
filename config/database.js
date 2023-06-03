@@ -1,17 +1,17 @@
-// This file is to connect to mysql database
+// // This file is to connect to mysql database
 
-require('dotenv').config();
-const mysql = require('mysql');
+// require('dotenv').config();
+// const mysql = require('mysql');
 
-const keys = require('./keys');
+// const keys = require('./keys');
 
-const connection = mysql.createConnection(keys.mysql);
+// const connection = mysql.createConnection(keys.mysql);
 
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log('connected!');
-});
+// connection.connect(function(err) {
+//   if (err) throw err;
+//   console.log('connected!');
+// });
 
-module.exports = {
-  connection
-};
+// module.exports = {
+//   connection
+// };

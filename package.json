@@ -25,6 +25,7 @@
   "homepage": "https://github.com/mohamedsamara/node-mysql-todo-app#readme",
   "dependencies": {
     "@google-cloud/trace-agent": "^7.1.2",
+    "axios": "^1.4.0",
     "body-parser": "^1.18.3",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
