@@ -29,12 +29,12 @@ app.get('/', getHomePage);
 // Route Files
 let todos = require('./routes/todo');
 app.use('/todos', todos);
-axios.get('http://todo-app-be.todo-app.svc.cluster.local/api/todos')
-  .then(response => {
-    // Xử lý dữ liệu từ phản hồi
-    console.log(response.data);
-  })
-  .catch(error => {
-    // Xử lý lỗi
-    console.error(error);
-  });
+// axios.get('http://todo-app-be.todo-app.svc.cluster.local/api/todos')
+//   .then(response => {
+//     // Xử lý dữ liệu từ phản hồi
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     // Xử lý lỗi
+//     console.error(error);
+//   });
