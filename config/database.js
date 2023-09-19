@@ -29,7 +29,7 @@ connection.connect(function(err) {
       return console.log(err.message);
     }
   });
-  console.log('connected!');
+  
 });
 
 module.exports = {
