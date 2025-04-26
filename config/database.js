@@ -26,14 +26,6 @@ connection.connect(function(err) {
     }
 
     console.log('Todos table created or already exists.');
-
-    // connection.end(function(err) {
-    //   if (err) {
-    //     console.error('Error closing the database connection: ' + err.message);
-    //     return;
-    //   }
-    //   console.log('Database connection closed.');
-    // });
   });
 });
 
