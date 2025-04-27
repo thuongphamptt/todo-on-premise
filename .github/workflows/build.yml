@@ -1,0 +1,10 @@
+name: todo-onpremise
+on:
+  push:
+    branches: [ master ]
+jobs:
+  docker:
+  runs-on: ubuntu-latest
+  steps:
+    -name: checkout
+      uses: actions/checkout@v2
